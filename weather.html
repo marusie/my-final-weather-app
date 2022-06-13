@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="weather-style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <div class="card">
+      <div class="card-body">
+        <form id="search-current-form">
+          <input class="cityname" type="text" id="input-city" placeholder="Enter your city.." />
+          <input class="search-submit" type="submit" value="search"></input>
+          <input id="current-submit" type="submit" value="current"></input>
+        </form>
+        <button class="cities">Kyiv</button>
+        <button class="cities">Lviv</button>
+        <button class="cities">Kharkiv</button>
+       <div class="container">
+        <div class="card middle-body">
+          <div class="card-body">
+            <h2>Currently in <span id="cityCurrent">Cherkasy</span></h2>
+            <h4 class="current-time"> 
+               Weekday and time
+             </h4> 
+             <img src="sunny.png" alt="sunny" class="image-sun" />
+          </div>
+                  <span class="current-weather-degrees">22</span> <a id="celciusDegrees" href="#">°C</a>
+       
+  
+            <div class="currenttemp">Sunny</div> 
+          </div>
+        </div>
+        <p class="quote">"You can try to sunbathe!"</p>
+
+          <div class="row">
+            <div class="col">
+              Mon
+              <br />
+              <img src="sunny.png" alt="sunny" />
+              <br />
+              23°С
+            </div>
+            <div class="col">
+              Tue
+              <br />
+              <img src="partly_cloudy.png" alt="cloudy" />
+              <br />
+              24°С
+            </div>
+            <div class="col">
+              Wed <br />
+              <img src="rain.png" alt="rain" />
+              <br />
+              19°С
+            </div>
+            <div class="col">
+              Thu
+              <br />
+              <img src="partly_cloudy.png" alt="cloudy" />
+              <br />
+              21°С
+            </div>
+            <div class="col">
+              Fri <br />
+              <img src="rain.png" alt="rain" />
+              <br />
+              23°С
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

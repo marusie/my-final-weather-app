@@ -1,0 +1,85 @@
+h1 {
+  text-align: center;
+  color: rgb(9, 97, 97);
+  font-family: "Syne", sans-serif;
+  font-weight: bold;
+}
+h4 {
+  color: rgb(9, 97, 97);
+}
+input {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
+}
+button {
+  display: inline;
+  margin: 10px auto;
+}
+.card {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: 40px;
+  border-radius: 30px;
+}
+.middle-body {
+  display: block;
+  margin: 0 auto;
+  background-color: aquamarine;
+}
+.cityname {
+  margin: 10px;
+}
+.currenttemp {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.current-weather-degrees {
+  text-align: center;
+  font-size: 25px;
+}
+.quote {
+  text-align: center;
+  font-family: "Syne", sans-serif;
+  color: rgb(21, 150, 107);
+  font-size: 22px;
+}
+.container {
+  margin-top: 30px;
+}
+.cities {
+  color: rgb(255, 255, 255);
+  background-color: rgb(24, 188, 150);
+  margin: 12px 15px;
+  padding: 4px 14px;
+  border: 40px;
+  border-radius: 50px;
+}
+.card-body {
+  padding: 14px 10px 5px 10px;
+  margin: 10px 130px;
+}
+.celcius,
+.fahrenheit {
+  font-family: "Syne", sans-serif;
+  font-size: 22px;
+}
+.midcard {
+  margin: 0px;
+  background-color: rgb(110, 178, 180);
+}
+.row {
+  margin: 10px;
+  padding: 10px 120px;
+}
+.search-submit,
+#current-submit {
+  padding: 3px 10px;
+  color: rgb(16, 85, 85);
+  background-color: rgba(0, 191, 191, 0.518);
+  border-radius: 8px;
+  border: darkcyan;
+}
