@@ -24,6 +24,7 @@ function formatDate(date) {
 }
 
 function displayWeather(response) {
+  console.log(response.data);
   document.querySelector("#cityCurrent").innerHTML = response.data.name;
   document.querySelector(".current-weather-degrees").innerHTML = Math.round(
     response.data.main.temp
@@ -35,7 +36,8 @@ function displayWeather(response) {
 
 function searchCity(city) {
   let apiKey = "9c0aa7b2c4f9f912a8741e09273f3cab";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Cherkasy&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -68,3 +70,4 @@ let currentLocationButton = document.querySelector("#current-submit");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Cherkasy");
+console.log();
