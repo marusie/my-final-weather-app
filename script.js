@@ -34,23 +34,21 @@ function displayWeather(response) {
     response.data.weather[0].main;
 }
 
-function searchCity(city) {
-  let apiKey = "9c0aa7b2c4f9f912a8741e09273f3cab";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Cherkasy&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
-  axios.get(apiUrl).then(displayWeather);
-}
-
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#input-city").value;
   searchCity(city);
 }
+function searchCity(city) {
+  let apiKey = "9c0aa7b2c4f9f912a8741e09273f3cab";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayWeather);
+}
 
 function searchLocation(position) {
   let apiKey = "9c0aa7b2c4f9f912a8741e09273f3cab";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -68,6 +66,3 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-submit");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-searchCity("Cherkasy");
-console.log();

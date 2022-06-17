@@ -58,6 +58,8 @@ button {
   font-family: "Syne", sans-serif;
   color: rgb(21, 150, 107);
   font-size: 22px;
+  background-color: rgb(207, 243, 219);
+  margin: 10px 180px;
 }
 .container {
   margin-top: 30px;
