@@ -29,7 +29,10 @@ function displayWeather(response) {
   document.querySelector(".current-weather-degrees").innerHTML = Math.round(
     response.data.main.temp
   );
-
+  document.querySelector(
+    "#humidity"
+  ).innerHTML = `Humidity: ${response.data.main.humidity}`;
+  document.querySelector("#wind").innerHTML = `Wind: ${response.data.wind.speed}`;
   document.querySelector(".currenttemp").innerHTML =
     response.data.weather[0].main;
 }

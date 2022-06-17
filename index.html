@@ -28,9 +28,6 @@
           <input class="search-submit" type="submit" value="search"></input>
           <input id="current-submit" type="submit" value="current"></input>
         </form>
-        <button class="cities">Kyiv</button>
-        <button class="cities">Lviv</button>
-        <button class="cities">Kharkiv</button>
        <div class="container">
         <div class="card middle-body">
           <div class="card-body">
@@ -38,15 +35,18 @@
             <h4 class="current-time"> 
                Weekday and time
              </h4> 
-            <div></span>  <span class="current-weather-degrees">22</span> <span class="celcius"> °C</span> </div>
-                <span class="currenttemp">Sunny</span>    <img src="sunny.png" alt="sunny" class="image-sun" />
-          </div>
-                 
-          
+            <div class="row">
+            <span class="col"> </span><span class="current-weather-degrees">22</span> <span class="celcius"> °C</span> </span>
+            <span class="col"> 
+              <li id="humidity"></li>
+              <li id="wind"></li>
+            </span>
+            </div>
+                <span class="currenttemp">Sunny</span> <img src="sunny.png" alt="sunny" class="image-sun" />
+                 </div>
           </div>
         </div>
         <p class="quote">"You can try to sunbathe!"</p>
-
           <div class="row">
             <div class="col">
               Mon

@@ -16,6 +16,9 @@ button {
   display: inline;
   margin: 10px auto;
 }
+body {
+  background-color: rgb(101, 247, 255);
+}
 .author {
   text-align: center;
 }
@@ -64,14 +67,6 @@ button {
 .container {
   margin-top: 30px;
 }
-.cities {
-  color: rgb(255, 255, 255);
-  background-color: rgb(24, 188, 150);
-  margin: 12px 15px;
-  padding: 4px 14px;
-  border: 40px;
-  border-radius: 50px;
-}
 .card-body {
   padding: 14px 10px 5px 10px;
   margin: 10px 130px;
@@ -97,4 +92,8 @@ button {
   background-color: rgba(0, 191, 191, 0.518);
   border-radius: 8px;
   border: darkcyan;
+}
+#wind,
+#humidity {
+  list-style-type: none;
 }
