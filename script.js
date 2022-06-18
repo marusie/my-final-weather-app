@@ -32,9 +32,17 @@ function displayWeather(response) {
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}`;
-  document.querySelector("#wind").innerHTML = `Wind: ${response.data.wind.speed}`;
+  document.querySelector(
+    "#wind"
+  ).innerHTML = `Wind: ${response.data.wind.speed}`;
   document.querySelector(".currenttemp").innerHTML =
     response.data.weather[0].main;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      `src`,
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function handleSubmit(event) {

@@ -17,10 +17,12 @@ button {
   margin: 10px auto;
 }
 body {
-  background-color: rgb(101, 247, 255);
+  background-color: rgb(98, 188, 194);
 }
 .author {
   text-align: center;
+  background-color: aliceblue;
+  margin: 10px 600px;
 }
 .card {
   display: block;
@@ -36,8 +38,8 @@ body {
   background: rgb(0, 250, 58);
   background: linear-gradient(
     90deg,
-    rgba(0, 250, 58, 1) 0%,
-    rgba(47, 244, 255, 1) 100%
+    rgb(145, 255, 246) 0%,
+    rgb(117, 180, 220) 100%
   );
 }
 .cityname {
