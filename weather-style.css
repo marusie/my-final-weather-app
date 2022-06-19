@@ -1,6 +1,6 @@
 h1 {
   text-align: center;
-  color: rgb(9, 97, 97);
+  color: rgb(232, 252, 252);
   font-family: "Syne", sans-serif;
   font-weight: bold;
 }
@@ -22,7 +22,7 @@ body {
 .author {
   text-align: center;
   background-color: aliceblue;
-  margin: 10px 600px;
+  margin: 10px 400px;
 }
 .card {
   display: block;
@@ -56,7 +56,9 @@ body {
 
 .current-weather-degrees {
   text-align: center;
-  font-size: 32px;
+  font-size: 36px;
+  font-weight: 600;
+  color: rgb(33, 113, 106);
 }
 .quote {
   text-align: center;
@@ -67,7 +69,7 @@ body {
   margin: 10px 180px;
 }
 .container {
-  margin-top: 30px;
+  margin: 15px 10px 25px;
 }
 .card-body {
   padding: 14px 10px 5px 10px;
@@ -78,6 +80,9 @@ body {
   font-family: "Syne", sans-serif;
   font-size: 22px;
 }
+.descriptions {
+  padding: 0 0 0 80px;
+}
 .midcard {
   margin: 0px;
   background-color: rgb(110, 178, 180);
@@ -85,7 +90,7 @@ body {
 
 .row {
   margin: 10px;
-  padding: 10px 120px;
+  padding: 10px 30px;
 }
 .search-submit,
 #current-submit {
