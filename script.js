@@ -25,16 +25,17 @@ function formatDate(date) {
 
 function displayWeather(response) {
   console.log(response.data);
+  celciusTemperature = response.data.main.temp;
   document.querySelector("#cityCurrent").innerHTML = response.data.name;
   document.querySelector(".current-weather-degrees").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector(
     "#humidity"
-  ).innerHTML = `Humidity: ${response.data.main.humidity}`;
+  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
   document.querySelector(
     "#wind"
-  ).innerHTML = `Wind: ${response.data.wind.speed}`;
+  ).innerHTML = `Wind: ${response.data.wind.speed} km/h`;
   document.querySelector(".currenttemp").innerHTML =
     response.data.weather[0].main;
   document
@@ -77,3 +78,20 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-submit");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".current-weather-degrees");
+  let temperatureFahrenheit = (temperatureElement.innerHTML * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(temperatureFahrenheit);
+}
+let celciusTemperature = null;
+let fahrenheitUnit = document.querySelector("#fahrenheit");
+fahrenheitUnit.addEventListener("click", displayFahrenheit);
+
+function displayCelcius(event) [
+  event.preventDefault();
+temperatureElement = Math.round(celciusTemperature);
+]
+let celciusUnit = document.querySelector("#celcius");
+celciusUnit.addEventListener("click", displayCelcius);
