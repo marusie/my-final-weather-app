@@ -25,11 +25,10 @@ function formatDate(date) {
 
 function displayWeather(response) {
   console.log(response.data);
-  celciusTemperature = response.data.main.temp;
   document.querySelector("#cityCurrent").innerHTML = response.data.name;
-  document.querySelector(".current-weather-degrees").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celciusTemperature = response.data.main.temp;
+  document.querySelector(".current-weather-degrees").innerHTML =
+    Math.round(celciusTemperature);
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -73,25 +72,30 @@ let dateElement = document.querySelector(".current-time");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-let searchForm = document.querySelector("#search-current-form");
-searchForm.addEventListener("submit", handleSubmit);
-
 let currentLocationButton = document.querySelector("#current-submit");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 function displayFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".current-weather-degrees");
-  let temperatureFahrenheit = (temperatureElement.innerHTML * 9) / 5 + 32;
+  let temperatureFahrenheit = (celciusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(temperatureFahrenheit);
 }
+
+function displayCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".current-weather-degrees");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
 let celciusTemperature = null;
+
+let searchForm = document.querySelector("#search-current-form");
+searchForm.addEventListener("submit", handleSubmit);
+
 let fahrenheitUnit = document.querySelector("#fahrenheit");
 fahrenheitUnit.addEventListener("click", displayFahrenheit);
 
-function displayCelcius(event) [
-  event.preventDefault();
-temperatureElement = Math.round(celciusTemperature);
-]
 let celciusUnit = document.querySelector("#celcius");
 celciusUnit.addEventListener("click", displayCelcius);
+
+searchCity("Hamm");
