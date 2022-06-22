@@ -104,3 +104,10 @@ body {
 #humidity {
   list-style-type: none;
 }
+.degrees .active {
+  color: black;
+  cursor: default;
+}
+.degrees .active:hover {
+  text-decoration: none;
+}
