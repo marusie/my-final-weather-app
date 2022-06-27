@@ -22,25 +22,38 @@ function formatDate(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  return days[day];
+}
 function displayTheFutureForecast(response) {
   console.log(response);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
             <div class="col">
-              ${forecastDay.dt}
+              ${formatDay(forecastDay.dt)}
               <br />
-              <img src="sunny.png" alt="sunny"/>
+              <img
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
+          alt=""
+          width="42"
+        />
               <br />
-              23°С
+              ${Math.round(forecastDay.temp.max)}°С
             `;
-    forecastHTML = forecastHTML + `</div>`;
-    forecastElement.innerHTML = forecastHTML;
+      forecastHTML = forecastHTML + `</div>`;
+      forecastElement.innerHTML = forecastHTML;
+    }
   });
 }
 
