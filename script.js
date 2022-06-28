@@ -64,7 +64,25 @@ function getForecast(coordinates) {
   console.log(urlApi);
   axios.get(urlApi).then(displayTheFutureForecast);
 }
+  function changeQuote(temperature) {
+    let quote = `This day will be the best :)`;
+    if (15 > temperature) {
+      quote = "It's better to wear some warm clothes! Good day!";
+    } if (temperature > 16 && temperature < 27) {
+      quote = "Not too hot or cold, best weather :) Good day!";
+    } else quote = "if u have an opportunity to stay at home, then do it!"
+    return quote;
+  }
+
+function getAccess(city) {
+  let apiKey = "9c0aa7b2c4f9f912a8741e09273f3cab";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(changeQuote);
+}
+
 function displayWeather(response) {
+  let quoteElement = document.querySelector(".quote");
+  quoteElement.innerHTML = changeQuote(celciusTemperature);
   document.querySelector("#cityCurrent").innerHTML = response.data.name;
   celciusTemperature = response.data.main.temp;
   document.querySelector(".current-weather-degrees").innerHTML =
