@@ -64,15 +64,19 @@ function getForecast(coordinates) {
   console.log(urlApi);
   axios.get(urlApi).then(displayTheFutureForecast);
 }
-  function changeQuote(temperature) {
-    let quote = `This day will be the best :)`;
-    if (15 > temperature) {
-      quote = "It's better to wear some warm clothes! Good day!";
-    } if (temperature > 16 && temperature < 27) {
-      quote = "Not too hot or cold, best weather :) Good day!";
-    } else quote = "if u have an opportunity to stay at home, then do it!"
-    return quote;
+function changeQuote(temperature) {
+  let quote = `This day will be the best :)`;
+  if (15 > temperature) {
+    quote = "It's better to wear some warm clothes! Good day!";
   }
+  if (temperature > 16 && temperature < 27) {
+    quote = "Not too hot or cold, best weather :) Good day!";
+  }
+  if (temperature > 28) {
+    quote = "if u have an opportunity to stay at home, then do it!";
+  }
+  return quote;
+}
 
 function getAccess(city) {
   let apiKey = "9c0aa7b2c4f9f912a8741e09273f3cab";

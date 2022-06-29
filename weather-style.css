@@ -64,18 +64,22 @@ body {
 .quote {
   text-align: center;
   font-family: "Syne", sans-serif;
-  color: rgb(6, 115, 79);
+  color: rgb(249, 255, 253);
   font-size: 22px;
-  background-color: rgb(128, 227, 219);
+   background: linear-gradient(
+    90deg,
+    rgb(100, 207, 198) 0%,
+    rgb(14, 164, 174) 100%
+  );
   margin: 10px 180px;
-  border-radius: 4px;
+  border-radius: 14px;
 }
 .best {
   font-weight: bold;
 }
 .quote:hover {
-  background-color: rgb(45, 108, 152);
-  color: rgb(248, 248, 104);
+  background-color: rgb(107, 152, 184);
+  color: rgb(19, 19, 105);
 }
 .container {
   margin: 15px 10px 25px;
